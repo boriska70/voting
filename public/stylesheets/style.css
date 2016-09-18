@@ -1,0 +1,117 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: #cccccc;
+  font-family: 'Open Sans';
+}
+
+#votecontent{
+  z-index: 2;
+  border-radius: 2em;
+  /*background-color: #00d4b4;*/
+  background-color: #76D6FF;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: table;
+  padding: 0px;
+  max-width: 940px;
+  position: relative;
+}
+
+#voteresultscontent{
+  z-index: 2;
+  border-radius: 2em;
+  /*background-color: #00d4b4;*/
+  background-color: #76D6FF;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  /*display: table;*/
+  width: 600px;
+  padding: 0px;
+  max-width: 940px;
+  position: relative;
+}
+
+#votetitle {
+  text-align: center;
+  /*color: darkorchid;*/
+  color: #E2F6FF
+}
+
+#choises{
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.choice {
+  color: darkblue;
+  font-weight: bold;
+}
+.result {
+  color: purple;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#resulttitle {
+  /*color: darkorchid;*/
+  color: #E2F6FF;
+  text-align: center;
+  padding-top: 0.1em;
+}
+
+#resultsubtitle {
+  /*color: white;*/
+  color: #E2F6FF;
+  text-align: center;
+}
+
+#dataresults{
+  display: flex;
+}
+
+.row{
+  display: table;
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.rowdata {
+  text-align: left;
+  font-size: 3em;
+  font-weight: 700;
+  /*color: blue;*/
+  color: #3A8CB4;
+  margin-bottom: 0.5em;
+  list-style-type: none;
+}
+
+.button {
+  border-radius: 0.5em;
+  /*background-color: lightseagreen;*/
+  background-color: #3A8CB4;
+  border: none;
+  /*color: white;*/
+  color: #E2F6FF;
+  text-align: center;
+  cursor: pointer;
+  font-size:18px;
+  font-weight: 700;
+  margin: 20px 2px;
+  padding: 15px 32px;
+  height: 70px;
+  width: 200px;
+
+}

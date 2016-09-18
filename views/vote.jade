@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(id='votecontent')
+    div(id='votetitle')
+      h1 You decide! Vote...
+        div(id='choises')
+          div(id='choiceLeft')
+            form(action='/votes/vote/' + choice1, method='get')
+              button(class="button") #{choice1}
+          div(style="padding-left: 1em;") &nbsp;
+          div(id='choiceRight')
+            form(action='/votes/vote/' + choice2, method='get')
+              button(class="button") #{choice2}

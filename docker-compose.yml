@@ -1,0 +1,30 @@
+version: '2'
+services:
+  elasticsearch:
+    image: elasticsearch:2.3.4
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+  voting-aut:
+    image: gaiadocker/voting
+    links:
+      - elasticsearch:es
+    environment:
+      - esHost=es:9200
+      - indexName=voting
+      - choice1=Large Cat
+      - choice2=Small Dog
+    ports:
+      - "3000:3000"
+    depends_on:
+      - elasticsearch
+  voting-e2e:
+    image: gaiadocker/voting-e2e
+    links:
+      - elasticsearch:es
+      - voting-aut:voting
+    environment:
+      - autHost=voting-aut:3000
+    entrypoint: ./wait-for-it.sh voting:3000 -- "npm run test:e2e"
+    depends_on:
+      - voting-aut

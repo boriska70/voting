@@ -1,0 +1,34 @@
+{
+  "name": "Vote",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha specs/**/*.js --require specs/helpers/chai.js",
+    "test:unit": "mocha specs/unit/*.js --require specs/helpers/chai.js",
+    "test:e2estdout": "mocha specs/e2e/*.js --require specs/helpers/chai.js",
+    "test:e2e": "mocha specs/e2e/*.js --require specs/helpers/chai.js --reporter xunit > test_results/xunit.xml ; cat test_results/xunit.xml",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "elasticsearch": "^11.0.1",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "log4js": "^0.6.37",
+    "moment": "^2.14.1",
+    "morgan": "~1.7.0",
+    "q": "^1.4.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.1.0",
+    "mocha": "^2.5.3",
+    "request": "^2.73.0",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  }
+}

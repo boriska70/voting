@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div(id='voteresultscontent')
+    div(id='resulttitle')
+      h1 VOTING RESULTS
+    div(id="resultsubtitle")
+      h3 (by #{moment().format('HH:mm:ss DD/MM/YYYY')})
+    p &nbsp;
+    div(id='dataresults')
+      ul
+        each choice in data
+          //div(class='row')
+            //div(class='rowdata') #{choice.key}:&nbsp; #{choice.doc_count}
+          li(class='rowdata') #{choice.key}:&nbsp; #{choice.doc_count}
+
+
